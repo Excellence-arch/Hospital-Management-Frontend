@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 container mt-5 pt-3 border rounded">
+      <h4 class="display-4 text-center">Register</h4>
+      <div [class]="error ? 'alert alert-danger' : 'alert-white'">{{error}}</div>
+      <input type="text" placeholder="Firstname" [(ngModel)]="firstname" class="my-2 form-control w-100">
+      <input type="text" placeholder="Lastname" [(ngModel)]="lastname" class="my-2 form-control w-100">
+      <input type="text" placeholder="Email" [(ngModel)]="email" class="my-2 form-control w-100">
+      <textarea cols="10" rows="5" placeholder="Address" [(ngModel)]="address" class="form-control w-100 my-2"></textarea>
+      <button class="btn btn-dark w-100 mb-3" (click)="register()">Register</button>
+    </div>
+  </div>
+</div>
