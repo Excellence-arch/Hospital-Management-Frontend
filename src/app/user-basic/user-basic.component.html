@@ -1,0 +1,10 @@
+<div class="col-7">
+  <p class="alert alert-danger" *ngIf="error != ''">{{error}}</p>
+  <p class="alert alert-success" *ngIf="success != ''">{{success}}</p>
+  <input class="my-2 form-control w-50" [(ngModel)]="patient.userId" disabled="true"/>
+  <input class="my-2 form-control w-50" [(ngModel)]="patient.firstname" placeholder="Firstname" />
+  <input class="my-2 form-control w-50" [(ngModel)]="patient.lastname" placeholder="Lastname" />
+  <input class="my-2 form-control w-50" [(ngModel)]="patient.email" placeholder="Email" />
+  <textarea class="my-2 form-control w-50" rows="5" [(ngModel)]="patient.address" placeholder="Address"> </textarea>
+  <button class="btn btn-primary" (click)="saveEdit()"  >Save</button>
+</div>

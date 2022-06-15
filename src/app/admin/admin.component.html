@@ -1,1 +1,20 @@
-<p>admin works!</p>
+<div class="container">
+  <table class="table table-striped border">
+    <thead>
+      <tr>
+        <td>S/N</td>
+        <td>Firstname</td>
+        <td>Lastname</td>
+        <td>Button</td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i = index; let patient of allPatients">
+      <tr>
+        <td>{{i+1}}</td>
+        <td>{{patient.firstname}}</td>
+        <td>{{patient.lastname}}</td>
+        <td> <button class="btn btn-primary" (click)="showUser(i)" >View</button> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
